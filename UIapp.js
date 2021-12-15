@@ -2,10 +2,6 @@ function game() {
 
     const RPS = ["rock", "paper", "scissors"];
 
-    function playerPlay() {
-        let player = prompt("Rock, Paper or Scissors?");
-        return player;
-    }
     function computerPlay() {
         return RPS[Math.floor(Math.random() * RPS.length)];
         // console.log(typeof (shuffle));
@@ -25,9 +21,11 @@ function game() {
     console.log("Player has played " + playerSelection);
     console.log("Computer has played " + computerSelection);
     console.log(playRound(playerSelection, computerSelection));
-}
-// game();
-// game();
-// game();
-// game();
-// game();
+};
+
+function playerPlay() {
+        return game();
+};
+
+
+document.getElementById("rock").addEventListener("click", playerPlay);
